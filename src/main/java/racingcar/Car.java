@@ -33,10 +33,16 @@ public class Car {
     	return result;
     }
     
-//    자동차 경주 게임을 완료한 후 누가 우승했는지를 알려준다. 우승자는 한 명 이상일 수 있다.
-
-//    우승자가 여러 명일 경우 쉼표(,)를 이용하여 구분한다.
-
-//    사용자가 잘못된 값을 입력할 경우 IllegalArgumentException를 발생시키고, "[ERROR]"로 시작하는 에러 메시지를 출력 후 그 부분부터 입력을 다시 받는다.
+    public String printError(int errorType) {
+    	String error = "[ERROR]";
+    	if(errorType == 1) { // name이 5개 초과
+    		error += "최대 5명까지 입력 가능합니다.";
+    	}else if(errorType == 2) { // name이 5자 초과
+    		error += "이름은 5자 미만으로 설정해주세요";    		
+    	}else if(errorType == 3) { // 이동 값 잘못 정함
+    		error += "이동할 값을 잘못 입력하셨습니다.";
+    	}
+    	return error;
+    }
     
 }
