@@ -1,9 +1,10 @@
-package racingcar;
+package racingcar.model;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import camp.nextstep.edu.missionutils.Randoms;
+import racingcar.CheckError;
 
 public class Car {
 	private final String name;
