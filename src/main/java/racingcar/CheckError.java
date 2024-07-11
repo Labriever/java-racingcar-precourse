@@ -2,9 +2,8 @@ package racingcar;
 
 public class CheckError {
 	// 추가 기능 구현
-		public void isName(String names) {
+		public void isName(String names){
 //	      자동차 이름은 쉼표(,)를 기준으로 구분하며 이름은 5자 이하만 가능하다.
-			System.out.println("경주할 자동차 이름을 입력하세요.(이름은 쉼표(,) 기준으로 구분)");
 			String[] nameArr = names.split(",");
 			if (nameArr.length > 5) {
 				throw new IllegalArgumentException(printError(1));
@@ -17,6 +16,8 @@ public class CheckError {
 			}
 
 		}
+		
+//      사용자가 잘못된 값을 입력할 경우 IllegalArgumentException를 발생시키고, "[ERROR]"로 시작하는 에러 메시지를 출력 후 그 부분부터 입력을 다시 받는다.
 		public static String printError(int errorType) {
 			String error = "[ERROR]";
 			if (errorType == 1) { // name이 5개 초과
